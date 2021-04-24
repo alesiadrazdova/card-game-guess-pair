@@ -105,3 +105,43 @@ body {
     background: linear-gradient(117deg, rgb(49, 188, 223) 0%, rgb(62, 30, 190) 100%);
     outline: none;
 }
+
+@media screen and (max-width: 1024px) {
+    .card-game {
+        width: 650px;
+    }
+    .card {
+        width: 60px;
+        height: 90px;
+        margin: 10px;
+    }
+    .front,
+    .back {
+        width: 60px;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    h1 {
+        font-size: 24px;
+        padding-bottom: 0px;
+        line-height: 130%;
+    }
+    #popup {
+        top: 150px;
+    }
+    .card-game {
+        width: 220px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .card {
+        width: 35px;
+        height: 50px;
+        margin: 10px;
+    }
+    .front,
+    .back {
+        width: 35px;
+    }
+}
