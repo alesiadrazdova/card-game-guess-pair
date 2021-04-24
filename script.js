@@ -71,3 +71,12 @@ function checkCards() {
         }, 1000)
     }
 }
+
+function checkWin() {
+    if (counterCouple === 16) {
+        cardsArr.forEach(card => { card.classList.remove('none') });
+        // createPopUp();
+    } else {
+        return;
+    }
+}
