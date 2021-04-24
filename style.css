@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    /* сброс дефолтных стилей */
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: #679bdf;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+body {
+    background-color: #161616;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+}
+
+.card-game {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    width: 1000px;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    perspective: 1000px;
+}
+
+.card {
+    position: relative;
+    width: 80px;
+    height: 120px;
+    display: inline-block;
+    margin: 20px;
+    transform: scale(1);
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+.card.rotate {
+    transform: rotateY(180deg);
+}
+
+.card.none {
+    opacity: 0%;
+}
+
+.card:active {
+    transform: scale(0.97);
+    transition: transform 0.2s;
+}
+
+.front,
+.back {
+    position: absolute;
+    text-align: center;
+    display: flex;
+    width: 80px;
+    margin: 0 auto;
+    justify-content: space-around;
+    backface-visibility: hidden;
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+#popup-wrapper {
+    width: 260px;
+    margin: 0 auto;
+}
