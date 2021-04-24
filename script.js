@@ -16,7 +16,7 @@ let secondCard = null;
 let counterStep = 0;
 let counterCouple = 0;
 
-function cardsListen() {
+function cardsShuffle() {
     cardsArr.forEach(card => {
         card.addEventListener('click', rotateCard);
         const randomId = Math.floor(Math.random() * arrBackCards.length);
@@ -24,7 +24,7 @@ function cardsListen() {
         card.style.order = randomId;
     });
 }
-cardsListen();
+cardsShuffle();
 
 function rotateCard(e) {
     this.addEventListener('click', rotateCard);
@@ -83,6 +83,16 @@ function checkWin() {
     }
 }
 
+function nullify() {
+    ifFlippedCard = lock = false;
+    firstCard = secondCard = null;
+    counterCouple = counterStep = 0;
+}
+
 export {
-    counterStep
+    counterStep,
+    cardsArr,
+    cardsShuffle,
+    rotateCard,
+    nullify
 }
