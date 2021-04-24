@@ -13,7 +13,7 @@ let secondCard = null;
 
 function cardsListen() {
     cardsArr.forEach(card => {
-        // card.addEventListener('click', rotateCard);
+        card.addEventListener('click', rotateCard);
         const randomId = Math.floor(Math.random() * arrBackCards.length);
 
         card.style.order = randomId;
