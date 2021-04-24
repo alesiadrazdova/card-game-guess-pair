@@ -1,3 +1,5 @@
+import { createPopUp } from "./createPopUp.js";
+
 const cards = document.getElementsByClassName('card');
 const backCards = document.getElementsByClassName('back');
 
@@ -75,8 +77,12 @@ function checkCards() {
 function checkWin() {
     if (counterCouple === 16) {
         cardsArr.forEach(card => { card.classList.remove('none') });
-        // createPopUp();
+        createPopUp();
     } else {
         return;
     }
+}
+
+export {
+    counterStep
 }
