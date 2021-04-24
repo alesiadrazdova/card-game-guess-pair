@@ -40,3 +40,7 @@ function rotateCard(e) {
         checkCards();
     }
 }
+
+function checkCards() {
+
+}
