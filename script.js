@@ -11,6 +11,9 @@ let lock = false;
 let firstCard = null;
 let secondCard = null;
 
+let counterStep = 0;
+let counterCouple = 0;
+
 function cardsListen() {
     cardsArr.forEach(card => {
         card.addEventListener('click', rotateCard);
@@ -42,5 +45,29 @@ function rotateCard(e) {
 }
 
 function checkCards() {
+    if (firstCard.dataset.card === secondCard.dataset.card) {
+        counterCouple++;
+        counterStep++;
 
+        setTimeout(() => {
+            firstCard.classList.add('none');
+            secondCard.classList.add('none');
+            firstCard.removeEventListener('click', rotateCard);
+            secondCard.removeEventListener('click', rotateCard);
+            lock = false;
+            checkWin();
+        }, 1000);
+
+    } else {
+        lock = true;
+        counterStep++;
+
+        setTimeout(() => {
+            firstCard.classList.remove('rotate');
+            secondCard.classList.remove('rotate');
+            firstCard.addEventListener('click', rotateCard);
+            firstCard = secondCard = null;
+            lock = false;
+        }, 1000)
+    }
 }
