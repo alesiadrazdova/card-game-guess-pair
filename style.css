@@ -1,6 +1,5 @@
 * {
     margin: 0;
-    /* сброс дефолтных стилей */
     padding: 0;
     box-sizing: border-box;
 }
@@ -76,4 +75,33 @@ body {
 #popup-wrapper {
     width: 260px;
     margin: 0 auto;
+}
+
+#popup {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    position: absolute;
+    width: 260px;
+    height: 130px;
+    border-radius: 10px;
+    text-align: center;
+    background: #0400d3;
+    border-radius: 10px;
+    padding: 20px;
+    top: 300px;
+}
+
+#btn {
+    color: #fff;
+    text-align: center;
+    font-size: 24px;
+    width: 260px;
+    height: 60px;
+    border-radius: 10px;
+    margin-top: 20px;
+    background: rgb(90, 166, 240);
+    background: linear-gradient(117deg, rgb(49, 188, 223) 0%, rgb(62, 30, 190) 100%);
+    outline: none;
 }
