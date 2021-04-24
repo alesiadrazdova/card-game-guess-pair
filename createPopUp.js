@@ -1,5 +1,5 @@
 import { counterStep } from "./script.js";
-
+import { restartGame } from "./restart.js";
 
 const popUpWindow = document.getElementById('popup-wrapper');
 
@@ -12,7 +12,7 @@ function createPopUp() {
     btn.textContent = 'Начни сначала';
     popUpWindow.append(popUp, btn);
 
-    // btn.addEventListener('click', restartGame);
+    btn.addEventListener('click', restartGame);
 }
 
 export { createPopUp };
